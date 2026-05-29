@@ -3,128 +3,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisan Creations - Handcrafted Gifts</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Artisan Creations crafts elegant handmade gifts for heartfelt celebrations, custom orders, and keepsake moments.">
+    <title>Artisan Creations | Handmade Luxury Gifts</title>
     <link rel="shortcut icon" href="images/ac-logo-round.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Artisan Creations</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="site-header" data-header>
+        <a class="brand" href="#home" aria-label="Artisan Creations home">
+            <img src="images/ac-logo-round.png" alt="" aria-hidden="true">
+            <span>Artisan Creations</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="site-nav" data-nav>
+            <a href="#collections">Collections</a>
+            <a href="#story">Story</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-backdrop" type="button" aria-label="Close navigation" aria-hidden="true" data-nav-backdrop></button>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Welcome to Artisan Creations</h2>
-                <p>Handcrafted beauty for your special moments</p>
-                <a href="#gallery" class="btn">Explore Our Creations</a>
+        <section class="hero" id="home" aria-label="Artisan Creations introduction">
+            <div class="hero__media" aria-hidden="true"></div>
+            <div class="hero__content hero-animate">
+                <p class="eyebrow">Handmade keepsakes for beautiful occasions</p>
+                <h1><span>Crafted with</span> <span>Heart, Made</span> <span>for Moments</span></h1>
+                <p class="hero__copy">Every ribbon, rose, chocolate, and engraved detail is composed by hand to turn a simple gift into a memory that feels deeply personal.</p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#collections">Explore Creations</a>
+                    <a class="button button--ghost" href="#contact">Start a Custom Order</a>
+                </div>
             </div>
+            <a class="scroll-cue" href="#collections" aria-label="Scroll to featured collection">
+                <span></span>
+            </a>
         </section>
 
-        <section id="gallery" class="gallery">
-            <div class="container">
-                <h2>Our Creations</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/Floral Gift Set-4 (1).jpeg" alt="Gift basket with roses">
-                        <div class="gallery-item-info">
-                            <h3>Floral Gift Set</h3>
-                            <p>Elegant roses with personalized gift box</p>
-                        </div>
+        <section class="section featured" id="collections">
+            <div class="section__intro reveal">
+                <p class="eyebrow">Featured collection</p>
+                <h2>Gifts that arrive with presence.</h2>
+                <p>Curated pieces with tactile finishes, soft florals, wrapped sweets, and personalized touches for occasions that deserve more than ordinary.</p>
+            </div>
+
+            <div class="featured__layout">
+                <article class="feature-card feature-card--large reveal">
+                    <figure>
+                        <img src="images/Floral Gift Set-4 (1).jpeg" alt="Luxury floral gift arrangement with roses and keepsakes">
+                    </figure>
+                    <div class="feature-card__content">
+                        <p>Signature piece</p>
+                        <h3>Floral Gift Set</h3>
+                        <span>Fresh romance, silk textures, and delicate keepsakes arranged for a graceful reveal.</span>
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/Sweet Delights-4 (2).jpeg" alt="Decorated gift boxes">
-                        <div class="gallery-item-info">
-                            <h3>Sweet Delights</h3>
-                            <p>Beautifully packaged chocolate assortments</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/Chocolate Lover's Dream-1 (2).jpeg" alt="Chocolate gift box">
-                        <div class="gallery-item-info">
+                </article>
+
+                <div class="featured__side">
+                    <article class="feature-card feature-card--small reveal">
+                        <figure>
+                            <img src="images/Chocolate Lover's Dream-1 (2).jpeg" alt="Premium chocolate gift box with decorative details">
+                        </figure>
+                        <div class="feature-card__content">
+                            <p>For sweet moments</p>
                             <h3>Chocolate Lover's Dream</h3>
-                            <p>Curated selection of premium chocolates</p>
                         </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/Leather Essentials (2).jpeg" alt="Personalized leather goods">
-                        <div class="gallery-item-info">
+                    </article>
+
+                    <article class="feature-card feature-card--small reveal">
+                        <figure>
+                            <img src="images/Leather Essentials (2).jpeg" alt="Personalized leather goods and accessories">
+                        </figure>
+                        <div class="feature-card__content">
+                            <p>Personalized</p>
                             <h3>Leather Essentials</h3>
-                            <p>Custom engraved wallet and keychain set</p>
                         </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/05.jpg" alt="Arabic gift box">
-                        <div class="gallery-item-info">
-                            <h3>Cultural Treasures</h3>
-                            <p>Artisanal gifts with Arabic calligraphy</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/Gourmet Gatherings (1).jpeg" alt="Decorated snack boxes">
-                        <div class="gallery-item-info">
+                    </article>
+
+                    <article class="feature-card feature-card--wide reveal">
+                        <figure>
+                            <img src="images/Gourmet Gatherings (1).jpeg" alt="Luxury gourmet gift arrangement">
+                        </figure>
+                        <div class="feature-card__content">
+                            <p>Gathering ready</p>
                             <h3>Gourmet Gatherings</h3>
-                            <p>Luxurious snack and treat arrangements</p>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section story" id="story">
+            <div class="story__image reveal">
+                <img src="images/pretty-lady-2.jpg" alt="Ruquayya, artisan behind Artisan Creations">
+            </div>
+            <div class="story__content reveal">
+                <p class="eyebrow">Brand story</p>
+                <h2>Made slowly, so each detail has a reason.</h2>
+                <p>Artisan Creations began with Ruquayya's love for meaningful gifting: the kind that feels warm before it is even opened. Her work blends floral styling, hand wrapping, calligraphy-inspired detail, and careful product curation into gifts that feel intimate, elegant, and made for one person alone.</p>
+                <p>Each creation is composed in small batches, guided by color, texture, occasion, and the emotion behind the order. The result is a gift that does not simply look beautiful. It carries the thought behind it.</p>
+                <div class="story__signature">
+                    <img src="images/ac-logo.png" alt="Artisan Creations logo">
+                    <span>Hand finished with care</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery" id="gallery">
+            <div class="section__intro reveal">
+                <p class="eyebrow">Creations gallery</p>
+                <h2>A quieter kind of luxury.</h2>
+                <p>Explore handcrafted arrangements with layered textures, personal details, and a polished finish from every angle.</p>
+            </div>
+
+            <div class="masonry-gallery">
+                <article class="gallery-piece gallery-piece--tall reveal">
+                    <img src="images/Sweet Delights-4 (1).jpeg" alt="Sweet Delights handmade gift set">
+                    <div><span>Sweet Delights</span></div>
+                </article>
+                <article class="gallery-piece reveal">
+                    <img src="images/Floral Gift Set-4 (3).jpeg" alt="Floral gift set detail">
+                    <div><span>Rose Keepsake</span></div>
+                </article>
+                <article class="gallery-piece gallery-piece--wide reveal">
+                    <img src="images/Gourmet Gatherings (4).jpeg" alt="Gourmet handmade arrangement">
+                    <div><span>Gourmet Gatherings</span></div>
+                </article>
+                <article class="gallery-piece reveal">
+                    <img src="images/Chocolate Lover's Dream-1 (4).jpeg" alt="Chocolate Lover's Dream gift box">
+                    <div><span>Chocolate Lover's Dream</span></div>
+                </article>
+                <article class="gallery-piece gallery-piece--tall reveal">
+                    <img src="images/05.jpg" alt="Cultural handmade gift with Arabic details">
+                    <div><span>Cultural Treasures</span></div>
+                </article>
+                <article class="gallery-piece reveal">
+                    <img src="images/Leather Essentials (4).jpeg" alt="Leather Essentials personalized gift set">
+                    <div><span>Leather Essentials</span></div>
+                </article>
+                <article class="gallery-piece reveal">
+                    <img src="images/Sweet Delights-4 (4).jpeg" alt="Decorative handmade sweets gift">
+                    <div><span>Celebration Box</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section values" id="handmade">
+            <div class="section__intro reveal">
+                <p class="eyebrow">Why handmade</p>
+                <h2>The difference is felt in the details.</h2>
+            </div>
+
+            <div class="value-grid">
+                <article class="value-card reveal">
+                    <span class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 3l2.4 5 5.6.8-4 3.9.9 5.6L12 15.6 7.1 18.3l.9-5.6-4-3.9 5.6-.8L12 3z"/></svg>
+                    </span>
+                    <h3>Unique</h3>
+                    <p>No two pieces are identical because every composition is shaped by hand, color, and occasion.</p>
+                </article>
+                <article class="value-card reveal">
+                    <span class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M6 13c0-5 4-9 12-10 0 8-4 14-10 14H6v4H4v-6c0-3 2-6 6-8-2 2-3 4-4 6z"/></svg>
+                    </span>
+                    <h3>Sustainable</h3>
+                    <p>Small-batch making encourages thoughtful sourcing, less excess, and pieces chosen with intention.</p>
+                </article>
+                <article class="value-card reveal">
+                    <span class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.3-8.1C.4 9.2 2.5 5 6.6 5c2.1 0 3.4 1.1 4.2 2.3C11.6 6.1 12.9 5 15 5c4.1 0 6.2 4.2 3.9 7.9C16.7 16.6 12 21 12 21z"/></svg>
+                    </span>
+                    <h3>Personal</h3>
+                    <p>Names, colors, notes, and meaningful details turn each order into a gift with a real story.</p>
+                </article>
+                <article class="value-card reveal">
+                    <span class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M4 7h16v4c0 5-3.5 9-8 10-4.5-1-8-5-8-10V7zm2-4h12v2H6V3z"/></svg>
+                    </span>
+                    <h3>Lasting</h3>
+                    <p>Every ribbon, wrap, and keepsake is selected to feel refined on arrival and remembered after.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section process" id="process">
+            <div class="section__intro reveal">
+                <p class="eyebrow">Our process</p>
+                <h2>From feeling to finished gift.</h2>
+            </div>
+
+            <div class="timeline" aria-label="Artisan Creations process timeline">
+                <article class="timeline__step reveal">
+                    <span>01</span>
+                    <h3>Idea</h3>
+                    <p>We begin with the occasion, recipient, colors, and the feeling you want the gift to carry.</p>
+                </article>
+                <article class="timeline__step reveal">
+                    <span>02</span>
+                    <h3>Craft</h3>
+                    <p>Materials are selected, layered, wrapped, and arranged by hand for balance and surprise.</p>
+                </article>
+                <article class="timeline__step reveal">
+                    <span>03</span>
+                    <h3>Finish</h3>
+                    <p>The final polish brings together tags, florals, ribbons, notes, and presentation details.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section testimonials" aria-label="Client testimonials">
+            <div class="testimonial-shell reveal">
+                <div class="testimonial-shell__heading">
+                    <p class="eyebrow">Kind words</p>
+                    <h2>Moments people remembered.</h2>
+                </div>
+
+                <div class="testimonial-slider" data-slider>
+                    <div class="testimonial-track" data-track>
+                        <article class="testimonial-card">
+                            <p>"The gift felt like it had been made for my sister's exact personality. Every detail was thoughtful, elegant, and beautifully finished."</p>
+                            <span>Amira H.</span>
+                        </article>
+                        <article class="testimonial-card">
+                            <p>"I ordered a custom chocolate and floral box, and the presentation was stunning. It looked luxurious without losing that handmade warmth."</p>
+                            <span>Sarah K.</span>
+                        </article>
+                        <article class="testimonial-card">
+                            <p>"The leather set was personalized so beautifully. It arrived ready to gift and honestly felt more special than anything store-bought."</p>
+                            <span>Nadia R.</span>
+                        </article>
+                    </div>
+
+                    <div class="slider-controls" aria-label="Testimonial controls">
+                        <button type="button" data-prev aria-label="Previous testimonial">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+                        <div class="slider-dots" data-dots></div>
+                        <button type="button" data-next aria-label="Next testimonial">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About the Artist</h2>
-                <div class="about-content">
-                    <img src="images/pretty-lady-2.jpg" alt="Artist" class="artist-img">
-                    <div class="artist-bio">
-                        <p>Hello! I'm Ruquayya, a passionate artisan dedicated to creating unique, handcrafted pieces that bring joy to your special moments. With over 10 years of experience in various crafting techniques, I strive to blend traditional methods with modern aesthetics.</p>
-                        <p>Each piece in my collection is lovingly made by hand, ensuring that no two items are exactly alike. I find inspiration in nature, cultural patterns, and the interplay of colors and textures. My goal is to create functional art that not only beautifies your surroundings but also tells a story.</p>
-                    </div>
-                </div>
+        <section class="cta-section reveal" aria-label="Create something special">
+            <div>
+                <p class="eyebrow">Custom gifting</p>
+                <h2>Create Something Special</h2>
+                <p>Tell us the occasion, the person, and the feeling. We will shape the rest into something beautifully personal.</p>
+            </div>
+            <div class="cta-section__actions">
+                <a class="button button--primary" href="#contact">Contact</a>
+                <a class="button button--light" href="#contact">Custom Order</a>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get in Touch</h2>
-                <div class="contact-grid">
-                    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Craft Street, Artville, AR 12345</p>
-                        <p><i class="fas fa-envelope"></i> ruquayya@artisancreations.com</p>
-                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-                        <h3>Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <section class="section contact" id="contact">
+            <div class="contact__intro reveal">
+                <p class="eyebrow">Contact</p>
+                <h2>Let us craft your next moment.</h2>
+                <p>Share the occasion and a few details. We will respond with availability, ideas, and a thoughtful next step.</p>
+            </div>
+
+            <div class="contact__grid">
+                <form class="contact-form reveal" action="#" method="post">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" autocomplete="name" required>
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" autocomplete="email" required>
+                    </label>
+                    <label>
+                        <span>Occasion</span>
+                        <input type="text" name="occasion" placeholder="Birthday, wedding, thank you...">
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <textarea name="message" rows="4" required></textarea>
+                    </label>
+                    <button class="button button--primary" type="submit">Send Message</button>
+                    <p class="form-note" data-form-note aria-live="polite"></p>
+                </form>
+
+                <div class="contact-side reveal">
+                    <aside class="contact-panel" aria-label="Contact details">
+                        <div class="contact-method">
+                            <span aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4V5zm8 7L5.8 7h12.4L12 12zm0 2.4L6 9.6V17h12V9.6l-6 4.8z"/></svg>
+                            </span>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:ruquayya@artisancreations.com">ruquayya@artisancreations.com</a>
+                            </div>
                         </div>
-                    </div>
+                        <div class="contact-method">
+                            <span aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M7 2h10v20H7V2zm2 3v14h6V5H9zm2 12h2v1h-2v-1z"/></svg>
+                            </span>
+                            <div>
+                                <h3>Phone</h3>
+                                <a href="tel:+11234567890">(123) 456-7890</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 2c3.9 0 7 3 7 6.8 0 5-7 13.2-7 13.2S5 13.8 5 8.8C5 5 8.1 2 12 2zm0 9.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg>
+                            </span>
+                            <div>
+                                <h3>Studio</h3>
+                                <p>By appointment for local custom gifting consultations.</p>
+                            </div>
+                        </div>
+                        <div class="social-links" aria-label="Social links">
+                            <a href="#" aria-label="Instagram">Instagram</a>
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="#" aria-label="Pinterest">Pinterest</a>
+                        </div>
+                    </aside>
+
+                    <article class="contact-panel contact-panel--info" aria-label="Service and response details">
+                        <h3>What Happens Next</h3>
+                        <ul class="contact-list">
+                            <li>Reply within 24 hours</li>
+                            <li>Clear quote and timeline</li>
+                            <li>Moodboard and style options</li>
+                            <li>Delivery and pickup guidance</li>
+                        </ul>
+                        <p class="contact-note">Most custom orders are finalized in 2-4 business days depending on detail level and event date.</p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Artisan Creations. All rights reserved. Created by <a href="https://mmkwebsites.onrender.com" target="_blank" rel="noopener noreferrer" class="mmk-link">MMK</a></p>
+    <footer class="site-footer">
+        <div class="footer-shell">
+            <section class="footer-column footer-column--brand" aria-label="About Artisan Creations">
+                <a class="footer-brand" href="#home">
+                    <img src="images/ac-logo-round.png" alt="" aria-hidden="true">
+                    <span>Artisan Creations</span>
+                </a>
+                <p>Handmade gifts crafted with florals, sweets, leather, and calligraphy-inspired detail for meaningful occasions.</p>
+                <a class="footer-cta" href="#contact">Start Your Custom Order</a>
+            </section>
+
+            <section class="footer-column" aria-label="Quick links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-column" aria-label="Services">
+                <h3>Services</h3>
+                <ul>
+                    <li>Custom gift curation</li>
+                    <li>Event gifting sets</li>
+                    <li>Personalized keepsakes</li>
+                    <li>Seasonal gift collections</li>
+                    <li>Local consultations</li>
+                </ul>
+            </section>
+
+            <section class="footer-column" aria-label="Footer contact details">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:ruquayya@artisancreations.com">ruquayya@artisancreations.com</a></li>
+                    <li><a href="tel:+11234567890">(123) 456-7890</a></li>
+                    <li>By appointment for studio visits</li>
+                    <li>Mon - Sat: 10:00 AM - 7:00 PM</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Artisan Creations. All rights reserved.</p>
+            <p>Created by <a href="https://mmkwebsites.onrender.com" target="_blank" rel="noopener noreferrer">MMK</a>.</p>
         </div>
     </footer>
 
